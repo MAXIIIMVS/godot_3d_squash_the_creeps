@@ -20,7 +20,7 @@ shape = SubResource("BoxShape3D_sgp6g")
 mesh = SubResource("BoxMesh_sgp6g")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819, 0, 29, 13)
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 29, 13)
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
