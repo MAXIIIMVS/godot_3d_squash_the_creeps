@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export var min_speed := 10
 @export var max_speed := 18
+@export var mob_scene: PackedScene
 
 
 func initialize(start_position: Vector3, player_position: Vector3):

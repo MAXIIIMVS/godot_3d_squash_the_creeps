@@ -16,6 +16,11 @@ run/main_scene="uid://2e64o63awf2h"
 config/features=PackedStringArray("4.4")
 config/icon="res://icon.webp"
 
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=540
+
 [filesystem]
 
 import/blender/enabled=false
