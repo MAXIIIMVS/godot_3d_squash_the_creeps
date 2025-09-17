@@ -21,6 +21,8 @@ func initialize(start_position: Vector3, player_position: Vector3):
 	velocity = Vector3.FORWARD * random_speed
 	velocity = velocity.rotated(Vector3.UP, rotation.y)
 
+	$AnimationPlayer.speed_scale = float(random_speed) / min_speed
+
 
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
