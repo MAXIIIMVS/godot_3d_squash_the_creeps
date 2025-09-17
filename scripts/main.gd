@@ -9,3 +9,7 @@ func _on_mob_timer_timeout():
 
 	mob.initialize($SpawnPath/SpawnLocation.position, $Player.position)
 	add_child(mob)
+
+
+func _on_player_hit() -> void:
+	$MobTimer.stop()
