@@ -4,9 +4,18 @@ extends CharacterBody3D
 @export var max_speed := 18
 @export var mob_scene: PackedScene
 
+signal squashed
+
+
+func squash():
+	squashed.emit()
+	# TODO: add points to the score
+	queue_free()
+
 
 func initialize(start_position: Vector3, player_position: Vector3):
-	look_at_from_position(start_position, player_position, Vector3.UP)
+	var target := Vector3(player_position.x, start_position.y, player_position.z)
+	look_at_from_position(start_position, target, Vector3.UP)
 	rotate_y(randf_range(-PI / 4, PI / 4))
 
 	var random_speed := randi_range(min_speed, max_speed)
