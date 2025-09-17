@@ -5,8 +5,7 @@ extends Node
 
 func _on_mob_timer_timeout():
 	var mob := mob_scene.instantiate()
-	var mob_spawn_location = get_node("SpawnPath/SpawnLocation")
-	mob_spawn_location.progress_ratio = randf()
+	$SpawnPath/SpawnLocation.progress_ratio = randf()
 
-	mob.initialize(mob_spawn_location.position, $Player.position)
+	mob.initialize($SpawnPath/SpawnLocation.position, $Player.position)
 	add_child(mob)
